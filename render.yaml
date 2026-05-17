@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: n8n-render
+    env: docker
+    plan: free
+    autoDeploy: true
+
+    envVars:
+      - key: N8N_HOST
+        value: n8n-render.onrender.com
+
+      - key: N8N_PORT
+        value: 5678
+
+      - key: WEBHOOK_URL
+        value: https://n8n-render.onrender.com/
+
+      - key: N8N_PROTOCOL
+        value: https
+
+      - key: GENERIC_TIMEZONE
+        value: Asia/Karachi
+
+      - key: TZ
+        value: Asia/Karachi
+
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-render.onrender.com/
+
+      - key: N8N_SECURE_COOKIE
+        value: true
